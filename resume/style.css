@@ -1,6 +1,18 @@
 body{
     margin: 0;
     padding: 0;
+    background-color: #EFEFEF;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+hr{
+    height: 0;
+    border: none;
+    border-top: 1px solid #EEEEEE;
 }
 
 .clearfix::after {
@@ -10,45 +22,51 @@ body{
 }
 
 .topNavBar{
-    margin: 20px 16px;
+    position:fixed;
+    /* margin: 20px 16px; */
+    width: 100%;
 }
 
-.topNavBar>a{
+.topNavBar .topNavBar-inner{
+    padding: 20px 16px;
+}
+
+.topNavBar a{
     float: left;
 }
 
-.topNavBar>nav{
+.topNavBar nav{
     float: right;
 }
 
-.topNavBar>.logo{
+.topNavBar .logo{
     font-family: "Arial Black";
     text-decoration: none;
     font-size: 24px;
     padding: 6px 0px 7px 0px;
 }
 
-.topNavBar>.logo>.rs{
+.topNavBar .logo>.rs{
     color: #E8676B;
 }
 
-.topNavBar>.logo>.card{
+.topNavBar .logo>.card{
     color: #9A9DA2;
     padding-left: 4px;
 }
 
-.topNavBar>nav>ul {
+.topNavBar nav>ul {
     margin: 0px;
     padding: 0px;
 }
 
-.topNavBar>nav>ul>li {
+.topNavBar nav>ul>li {
     float: left;
     list-style: none;
     margin: 0 8px 0 8px;
 }
 
-.topNavBar>nav>ul>li>a {
+.topNavBar nav>ul>li>a {
     text-decoration: none;
     padding: 12px 0;
     font-weight: bold;
@@ -59,6 +77,115 @@ body{
     display: block;
 }
 
-.topNavBar>nav>ul>li>a:hover{
+.topNavBar nav>ul>li>a:hover{
     border-bottom: 3px solid red;
+}
+
+.banner {
+    background-image: url(./img/rs-cover-2-2-1-1.jpg);
+    height: 515px;
+    background-position: center;
+    background-size: cover;
+    border: 1px solid red;
+}
+
+.banner .mudo{
+    background-color: rgb(0, 0, 0,0.7);
+    height: 515px;
+}
+
+.usercards{
+    max-width: 940px;
+    border: 1px solid red;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #FFFFFF;
+}
+
+.text .hello{
+    display: inline-block;
+    background-color: #E8676B;
+    color: white;
+    padding:4px 16px; 
+    margin-bottom: 20px;
+    font-weight: bold;
+    line-height: 22px;
+    position: relative;
+}
+
+.triangle{
+    display: block;
+    border:8px solid transparent;
+    width:0;
+    border-left-color:#E8676B;
+    border-top-width:1px;
+    position: absolute;
+    top:98%;
+    left: 4px;
+}
+
+.usercards .picture{
+    padding: 58px 50px;
+}
+
+.pic{
+    float: left;
+}
+
+.text{
+    padding-left: 66px;
+    float: left;
+    width: 470px;
+}
+
+.text h2{
+    padding: 16px 0;
+}
+
+.text hr{
+    margin: 20px 0;
+}
+
+.person dt,
+.person dd{
+    float: left;
+    padding: 5px 0;
+}
+
+.person dt{
+    width: 30%;
+    font-weight: bold;
+}
+
+.person dd{
+    width: 70%;
+    color:#D8DADC;
+}
+
+.usercards .media{
+    background-color: #E8676B;
+    text-align: center;
+}
+
+.usercards .media a{
+    border-radius: 50%;
+    line-height: 20px;
+    width: 30px;
+    padding: 5px 0;
+    display: inline-block;
+    margin: 26px;
+    border: 1px solid transparent;
+}
+
+.usercards .media a:hover{
+    background-color:#D05C60;
+}
+
+.usercards .media svg{
+    display: inline-block;
+    height: 20px;
+    width:20px;
+    fill:white;
+    /* vertical-align: top; */
+    /* padding: 36px; */
 }
