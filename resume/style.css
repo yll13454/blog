@@ -96,7 +96,7 @@ hr{
 
 .usercards{
     max-width: 940px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     margin-left: auto;
     margin-right: auto;
     background-color: #FFFFFF;
