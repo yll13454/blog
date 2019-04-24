@@ -10,10 +10,11 @@
     <script src="https://at.alicdn.com/t/font_1133102_onf97ne75vb.js"></script>
     <style type="text/css">
         .icon {
-           width: 1em; height: 1em;
-           vertical-align: -0.15em;
-           fill: currentColor;
-           overflow: hidden;
+            width: 1em;
+            height: 1em;
+            vertical-align: -0.15em;
+            fill: currentColor;
+            overflow: hidden;
         }
     </style>
 </head>
@@ -48,7 +49,7 @@
         <div class="usercards">
             <div class="picture clearfix">
                 <div class="pic">
-                    <img src="./img/startuper-hover-1-299x347.jpg"  height="342" width="296" alt="头像">
+                    <img src="./img/startuper-1.jpg" height="342" width="296" alt="头像">
                 </div>
                 <div class="text">
                     <span class="hello">HELLO
@@ -69,53 +70,109 @@
             </div>
             <footer class="media">
                 <a href=""><svg class="icon" aria-hidden="true">
-                    <use xlink:href="#icon-qq"></use>
-                </svg></a>
+                        <use xlink:href="#icon-qq"></use>
+                    </svg></a>
                 <a href=""><svg class="icon" aria-hidden="true">
-                    <use xlink:href="#icon-weibo"></use>
-                </svg></a>
+                        <use xlink:href="#icon-weibo"></use>
+                    </svg></a>
                 <a href=""><svg class="icon" aria-hidden="true">
-                    <use xlink:href="#icon-github"></use>
-                </svg></a>
+                        <use xlink:href="#icon-github"></use>
+                    </svg></a>
                 <a href=""><svg class="icon" aria-hidden="true">
-                    <use xlink:href="#icon-linkedin"></use>
-                </svg></a>
+                        <use xlink:href="#icon-linkedin"></use>
+                    </svg></a>
                 <a href=""><svg class="icon" aria-hidden="true">
-                    <use xlink:href="#icon-twitter"></use>
-                </svg></a>
+                        <use xlink:href="#icon-twitter"></use>
+                    </svg></a>
                 <a href=""><svg class="icon" aria-hidden="true">
-                    <use xlink:href="#icon-facebook"></use>
-                </svg></a>
+                        <use xlink:href="#icon-facebook"></use>
+                    </svg></a>
             </footer>
         </div>
-        <a href="">Download</a>
-        <p>
+        <p class="downloadResuma">
+            <a href="" target="_blank" download>DOWNLOAD RESUMA</a>
+        </p>
+        <p class="PersonalProfile">
             方应杭， 资深前端工程师，资深前端讲师，现在在 饥人谷 教前端课程。<br>
             技能：前端开发，Rails 开发，Node.js 开发
         </p>
     </main>
     <section class="skills">
         <h2>技能</h2>
-        <ol>
-            <li>html &amp; css</li>
-            <li>jacascript</li>
-            <li>vue</li>
-            <li>react</li>
+        <ol class="clearfix">
+            <li>
+                <h3>html &amp; css</h3>
+                <div class="progressBar">
+                    <div class="progress"></div>
+                </div>
+            </li>
+            <li>
+                <h3>JavaScript</h3>
+                <div class="progressBar">
+                    <div class="progress" style="width:60%;"></div>
+                </div>
+            </li>
+            <li>
+                <h3>vue</h3>
+                <div class="progressBar">
+                    <div class="progress" style="width:90%;"></div>
+                </div>
+            </li>
+            <li>
+                <h3>react</h3>
+                <div class="progressBar">
+                    <div class="progress" style="width:70%;"></div>
+                </div>
+            </li>
+            <li>
+                <h3>jquery</h3>
+                <div class="progressBar">
+                    <div class="progress" style="width:50%;"></div>
+                </div>
+            </li>
+            <li>
+                <h3>python</h3>
+                <div class="progressBar">
+                    <div class="progress" style="width:95%;"></div>
+                </div>
+            </li>
         </ol>
     </section>
-    <sction class="jobs">
+    <section class="jobs">
         <h2>作品集</h2>
-        <ol>
-            <li>原生</li>
-            <li>框架</li>
-            <li>非框架</li>
-        </ol>
-        <div class="jobs">
-            <div class="big"></div>
-            <div class="small"></div>
-            <div class="small"></div>
+        <nav class="portfolio">
+            <ol class="clearfix">
+                <li id="portfolio1">原生</li>
+                <li id="portfolio2">框架</li>
+                <li id="portfolio3">非框架</li>
+            </ol>
+            <div class="bar">
+                <div id="bariInner" class="progress"></div>
+            </div>
+        </nav>
+        <div class="jobs1">
+            <div class="big">
+                <img src="./img/1.jpg" alt="">
+            </div>
+            <div class="small1">
+                <img src="./img/2.jpg" alt="">
+            </div>
+            <div class="small2">
+                <img src="./img/3.jpg" alt="">
+            </div>
         </div>
-    </sction>
+    </section>
+    <script>
+        portfolio1.onclick=function(){
+            bariInner.className = 'progress';
+        }
+        portfolio2.onclick=function(){
+            bariInner.className = 'progress1';
+        }
+        portfolio3.onclick=function(){
+            bariInner.className = 'progress2';
+        }
+    </script>
 </body>
 
 </html>
