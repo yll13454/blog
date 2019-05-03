@@ -3,32 +3,72 @@
     padding: 0;
 }
 
+body{
+    height: 100vh;
+    /* display: flex;
+    justify-content: center;
+    align-items:center; */
+    background-size: cover;
+    background: grey url(./img/wall.jpg) no-repeat center center scroll;
+}
+
 main{
     /* margin-left: auto;
     margin-right: auto; */
+    height: 100vh;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 main .keyswarrys{
+    margin-top: 12px;
     display: inline-block;
+    border-radius: 10px;
+    font-family: 'Malgun Gothic';
+    font-size: 24px;
+    background: linear-gradient(to bottom, rgba(223,223,223,1) 1%,rgba(193,193,193,1) 100%); 
+    box-shadow: 0px 4px 10px #C9C9C9, 0px -7px 0px -7px #808080, 0px 8px 0px 1px #000000;
+    border: 1px solid #c2c3c4;
+    border-top-color: transparent;
+    /* text-align: center; */
+    /* position: relative; */
     /* margin-left: auto;
     margin-right: auto; */
     /* text-align: center; *///没起作用
+    /* background: linear-gradient(to bottom, rgba(234,234,234,1) 0%,rgba(65,65,65,1) 100%);  */
+}
+
+main .keyswarrys div:nth-child(2){
+    /* border: 1px solid red; */
+    margin-left: 88px;
+    /* position: absolute; */
+    /* left: 12px; */
+}
+
+main .keyswarrys div:nth-child(3){
+    /* border: 1px solid red; */
+    margin-left: 75px;
+}
+
+main .keyswarrys .row{
+    margin: 14px 0;
 }
 
 main .keyswarrys kbd{
-    display:inline-block;
-    vertical-align: top;
-    border: 1px solid rgb(107, 105, 105);
-    width: 4em;
-    height: 4em;
-    margin: 16px;
-    text-transform: uppercase;
-    position: relative;
     text-align: left;
-    font-weight: bold;
-    /* font-size: 14px; */
-    box-shadow:0px 1px 3px #333333;
+    position: relative;
+    display: inline-block;
+    margin: 0 8px;
+    width:64px ;
+    height: 64px;
+    border-radius: 5px;
+    border:1px solid #FEFEFE;
+    border-top-color: transparent;
+    text-transform: uppercase;
+    background: linear-gradient(to bottom, rgba(239,239,239,1) 0%,rgba(241,241,241,1) 100%);
+    box-shadow:0px 3px 10px #C9C9C9, 0px 3px 2px #808080, 0px 4px 0px 2PX #000000;
 }
 
 main .keyswarrys kbd:hover>button{
@@ -40,6 +80,14 @@ main .keyswarrys kbd button{
     right: 0;
     bottom: 0;
     display: none;
+}
+
+main .keyswarrys kbd img{
+    position: absolute;
+    left: 4px;
+    bottom: 4px;
+    width: 24px;
+    height: 24px;
 }
 
 
