@@ -1,5 +1,9 @@
 body{
     overflow:hidden;
+    /* position: relative; */
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 *{
     margin: 0;
@@ -17,11 +21,12 @@ li,ul,ol{
 #canvas{
     /* background-color: green; */
     position: fixed;
+    /* position: absolute; */
     top: 0;
     left: 0;
 }
 .cutover{
-    position: absolute;
+    position: fixed;
     left: 10px;
     top: 15px;
 }
