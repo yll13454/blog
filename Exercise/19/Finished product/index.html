@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>test3</title>
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+    <canvas id="canvas" width="500" height="500"></canvas>
+    <div class="cutover" id="action">
+        <svg class="icon" id="draw" aria-hidden="true">
+            <use xlink:href="#icon-pen"></use>
+        </svg>
+        <input type="range" min="1" max="10" step="1" value="1">
+        <span class="value"></span>
+        <svg class="icon" id="eraser" aria-hidden="true">
+            <use xlink:href="#icon-eraser"></use>
+        </svg>
+        <svg class="icon" id="clear" aria-hidden="true">
+            <use xlink:href="#icon-clear"></use>
+        </svg>
+        <svg class="icon" id="down" aria-hidden="true">
+            <use xlink:href="#icon-save"></use>
+        </svg>
+
+    </div>
+    <div id="Palette">
+        <ol>
+            <li id="black" style="background:black;" class="check"></li>
+            <li id="red" style="background:red;"></li>
+            <li id="yellow" style="background:yellow;"></li>
+            <li id="blue" style="background:blue;"></li>
+            <!-- <li style="position: relative;">
+
+                <input class="inputColor" type="color" value="#ffffff" />
+               <span class="plus">+</span>
+            </li> -->
+
+        </ol>
+    </div>
+
+    <script src="./main.js"></script>
+    <script src="//at.alicdn.com/t/font_1177873_ieozxsqeki8.js"></script>
+</body>
+
+</html>

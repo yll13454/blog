@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>test3</title>
+    <style>
+        body{
+            overflow:hidden;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #canvas{
+            background-color: green;
+        }
+        .cutover{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+        .cutover.x>#draw{
+            background-color: gray;
+        }
+        .cutover.y>#clear{
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas" width="500" height="500"></canvas>
+    <div class="cutover" id="action">
+        <button id="draw">画笔</button>
+        <button id="clear">橡皮擦</button>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
