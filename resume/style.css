@@ -9,10 +9,22 @@ body{
     padding: 0;
 }
 
+ul,li,ol{
+    list-style: none;
+}
+
 hr{
     height: 0;
     border: none;
     border-top: 1px solid #EEEEEE;
+}
+
+.icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
 }
 
 .clearfix::after {
@@ -24,11 +36,22 @@ hr{
 .topNavBar{
     position:fixed;
     /* margin: 20px 16px; */
+    color: #CBCACB;
     width: 100%;
+    padding:20px 0;
+    transition: all .5s;
+    z-index: 1;
+}
+
+.topNavBar.whitec{
+    color: black;
+    background-color: white;
+    padding: 8px 0;
+    box-shadow: 0 0 8px rgb(0, 0, 0,0.7);
 }
 
 .topNavBar .topNavBar-inner{
-    padding: 20px 16px;
+    padding: 0px 16px;
 }
 
 .topNavBar a{
@@ -58,27 +81,79 @@ hr{
 .topNavBar nav>ul {
     margin: 0px;
     padding: 0px;
+    margin-top: 6px;
 }
 
 .topNavBar nav>ul>li {
     float: left;
-    list-style: none;
     margin: 0 8px 0 8px;
+    position: relative;
 }
 
 .topNavBar nav>ul>li>a {
     text-decoration: none;
-    padding: 12px 0;
+    padding: 9px 0;
     font-weight: bold;
-    color: #CBCACB;
+    color:  inherit;
     font-size: 12px;
-    border-bottom: 3px solid transparent;
-    border-top: 3px solid transparent;
+    /* border-bottom: 3px solid transparent;
+    border-top: 3px solid transparent; */
+    display: block;
+    position: relative;
+}
+
+.topNavBar nav>ul>li.active::after{
+    content: '';
+    position: absolute;
+    left:0;
+    top: 100%;
+    width: 100%;
+    height: 3px;
+    background-color: #E8676B;
+    animation: UnderlineA .2s linear;
+}
+
+@keyframes UnderlineA{
+    0%{
+        width: 0;
+    };
+    100%{
+        width: 100%;
+    };
+}
+
+.topNavBar nav>ul>li>.submune{
+    position: absolute;
+    right: 0;
+    top: 110%;
+    display: block;
+    /* padding: 22px 32px; */
+    padding: 10px 0;
+    white-space:nowrap; 
+    color: #000;
+    background-color: white;
+    box-shadow:0 0 5px rgba(179, 176, 176, 0.7);
+    display: none;
+    animation: submuneslite .2s linear;
+}
+
+@keyframes submuneslite{
+    0%{
+        margin-right: 100%;
+        /* transform: translateX(-100%); */
+    }
+    100%{
+        margin-right: 0%;
+        /* transform: translateX(0); */
+    }
+}
+
+.topNavBar nav>ul>li.active>.submune{
     display: block;
 }
 
-.topNavBar nav>ul>li>a:hover{
-    border-bottom: 3px solid red;
+.topNavBar nav>ul>li>.submune>li{
+    margin: 10px 38px;
 }
 
 .banner {

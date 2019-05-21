@@ -5,37 +5,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./loading.css">
     <link rel="stylesheet" href="./style.css">
     <title>个人简历</title>
     <script src="https://at.alicdn.com/t/font_1133102_onf97ne75vb.js"></script>
-    <style type="text/css">
-        .icon {
-            width: 1em;
-            height: 1em;
-            vertical-align: -0.15em;
-            fill: currentColor;
-            overflow: hidden;
-        }
-    </style>
 </head>
 
 <body>
-    <div class="topNavBar clearfix">
-        <div class="topNavBar-inner">
+    <div  id="stateWelcome" class="warrpe">
+        <div class="loading"></div>
+    </div>
+    <div id="topNav" class="topNavBar ">
+        <div class="topNavBar-inner clearfix">
             <a href="" class="logo">
                 <span class="rs">RS</span><span class="card">card</span>
             </a>
-            <nav>
+            <nav class="submonitor">
                 <ul class="clearfix">
-                    <li><a href="">ABOUT</a></li>
-                    <li><a href="">SKILLS</a></li>
-                    <li><a href="">PORTFOLIO</a></li>
-                    <li><a href="">EXPERIENCE</a></li>
-                    <li><a href="">PRICING</a></li>
-                    <li><a href="">BLOG</a></li>
-                    <li><a href="">CALENDAR</a></li>
-                    <li><a href="">CONTACT</a></li>
-                    <li><a href="">OTHER</a></li>
+                    <li><a href="#siteAbout">ABOUT</a></li>
+                    <li><a href="#siteSkills">SKILLS</a>
+                        <ul class="submune">
+                            <li>作品1</li>
+                            <li>作品2</li>
+                            <li>作品3</li>
+                        </ul>
+                    </li>
+                    <li><a href="#sitePortfolio">PORTFOLIO</a></li>
+                    <li><a href="#siteExperience">EXPERIENCE</a></li>
+                    <li><a href="#sitePricing">PRICING</a></li>
+                    <li><a href="#siteBlog">BLOG</a></li>
+                    <li><a href="#siteCalendar">CALENDAR</a></li>
+                    <li><a href="#siteContact">CONTACT</a></li>
+                    <li><a href="#siteOther">OTHER</a></li>
                 </ul>
             </nav>
         </div>
@@ -46,7 +47,7 @@
         <div class="mudo"></div>
     </div>
     <main>
-        <div class="usercards">
+        <div id="siteAbout" class="usercards">
             <div class="picture clearfix">
                 <div class="pic">
                     <img src="./img/startuper-1.jpg" height="342" width="296" alt="头像">
@@ -97,7 +98,7 @@
             技能：前端开发，Rails 开发，Node.js 开发
         </p>
     </main>
-    <section class="skills">
+    <section id="siteSkills" class="skills">
         <h2>技能</h2>
         <ol class="clearfix">
             <li>
@@ -138,7 +139,7 @@
             </li>
         </ol>
     </section>
-    <section class="jobs">
+    <section id="siteBlog" class="jobs">
         <h2>作品集</h2>
         <nav class="portfolio">
             <ol class="clearfix">
@@ -162,16 +163,13 @@
             </div>
         </div>
     </section>
+    <script src="./main.js"></script>
     <script>
-        portfolio1.onclick=function(){
-            bariInner.className = 'progress';
-        }
-        portfolio2.onclick=function(){
-            bariInner.className = 'progress1';
-        }
-        portfolio3.onclick=function(){
-            bariInner.className = 'progress2';
-        }
+        // debugger
+        setTimeout(function(a){
+            stateWelcome.classList.add('active');
+            // debugger
+        },500);
     </script>
 </body>
 
