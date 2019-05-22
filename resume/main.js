@@ -78,10 +78,10 @@ function findClosest() {
         }
     }
     var id = specialTags[minIndex].id;
+    specialTags[minIndex].classList.remove('offset');
     var a = document.querySelector('a[href="#' + id + '"]');
     var li = a.parentElement;
     var borathor = li.parentElement.children;
-
     for(var i = 0; i < borathor.length; i++){
         borathor[i].classList.remove('highlight');
     }

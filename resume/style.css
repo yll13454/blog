@@ -123,6 +123,15 @@ hr{
     };
 }
 
+[date-x].offset{
+    transform: translateY(380px);
+}
+
+[date-x]{
+    transform: translateY(0px);
+    transition: all .5s;
+}
+
 .topNavBar nav>ul>li>.submune{
     position: absolute;
     right: 0;
