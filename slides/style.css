@@ -3,12 +3,20 @@
     padding:0;
 }
 
-.box{
+.box-wrapper{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    flex-direction:column;
+}
+
+.box{
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction:column; */
+    width: 600px;
 }
 
 .window{
