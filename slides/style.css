@@ -1,0 +1,38 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction:column;
+}
+
+.window{
+    overflow: hidden;
+}
+
+.window .wrapper{
+    height: 450px;
+    width:600px;
+    display: flex;
+    transition: all .3s;
+}
+
+.window .wrapper img{
+    height: inherit;
+    /* width:inherit; */
+}
+
+.bt{
+    display: flex;
+    width: 600px;
+    justify-content: space-around;
+}
+ .bt button{
+    width: 90px;
+    height:24px;
+}
