@@ -71,3 +71,5 @@ section.jobs{margin-bottom:100px;text-align:center;}
 .jobs1 .big{position:absolute;top:0;left:0;}
 .jobs1 .small1{position:absolute;top:0;left:644px;}
 .jobs1 .small2{position:absolute;top:298px;left:644px;}
+.swiper-container{width:788px;height:591px;}
+.swiper-button-prev,.swiper-button-next{width:44px;height:44px;border-radius:50%;background-color:white;}
