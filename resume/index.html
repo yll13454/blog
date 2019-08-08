@@ -8,12 +8,26 @@
     <link rel="stylesheet" href="./loading.css">
     <link rel="stylesheet" href="./style.css">
     <title>个人简历</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
     <script src="https://at.alicdn.com/t/font_1133102_onf97ne75vb.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/16.3.5/Tween.min.js"></script>
 </head>
+<style>
+    .swiper-container {
+        width: 788px;
+        height: 591px;
+    }
+    .swiper-button-prev,
+    .swiper-button-next{
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        background-color: white;
+    }
+</style>
 
 <body>
-    <div  id="stateWelcome" class="warrpe">
+    <div id="stateWelcome" class="warrpe">
         <div class="loading"></div>
     </div>
     <div id="topNav" class="topNavBar ">
@@ -142,7 +156,7 @@
     </section>
     <section date-x id="siteBlog" class="jobs offset">
         <h2>作品集</h2>
-        <nav class="portfolio">
+        <!-- <nav class="portfolio">
             <ol class="clearfix">
                 <li id="portfolio1">原生</li>
                 <li id="portfolio2">框架</li>
@@ -162,15 +176,49 @@
             <div class="small2">
                 <img src="./img/3.jpg" alt="">
             </div>
+        </div> -->
+        <div class="portfolio">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <img src="./works/1.png" class="swiper-slide">
+                    <img src="./works/2.png" class="swiper-slide">
+                    <img src="./works/3.png" class="swiper-slide">
+                </div>
+                <!-- 如果需要分页器 -->
+                <div class="swiper-pagination"></div>
+
+            </div>
+            <!-- 如果需要导航按钮 -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
         </div>
     </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
     <script src="./main.js"></script>
     <script>
+        var mySwiper = new Swiper('.swiper-container', {
+            direction: 'horizontal', // 垂直切换选项
+            loop: true, // 循环模式选项
+            autoplay:true,
+            // 如果需要分页器
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            // 如果需要前进后退按钮
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+        })        
+    </script>
+    <script>
         // debugger
-        setTimeout(function(a){
+        setTimeout(function (a) {
             stateWelcome.classList.add('active');
             // debugger
-        },100);
+        }, 100);
     </script>
 </body>
 

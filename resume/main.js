@@ -4,15 +4,15 @@ var portfolio3 = document.getElementById('portfolio3');
 var bariInner = document.getElementById('bariInner');
 var topNav = document.getElementById('topNav');
 
-portfolio1.onclick = function () {
-    bariInner.className = 'progress';
-}
-portfolio2.onclick = function () {
-    bariInner.className = 'progress1';
-}
-portfolio3.onclick = function () {
-    bariInner.className = 'progress2';
-}
+// portfolio1.onclick = function () {
+//     bariInner.className = 'progress';
+// }
+// portfolio2.onclick = function () {
+//     bariInner.className = 'progress1';
+// }
+// portfolio3.onclick = function () {
+//     bariInner.className = 'progress2';
+// }
 
 findClosest() 
 
