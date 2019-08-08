@@ -60,16 +60,5 @@ section.skills>h2,section.jobs>h2{text-align:center;margin-top:60px;}
 section.jobs{margin-bottom:100px;text-align:center;}
 .jobs h2{text-align:center;}
 .jobs .portfolio{text-align:center;display:inline-block;margin-top:32px;}
-.jobs ol{margin:26px auto 0;display:inline-block;vertical-align:top;}
-.jobs ol li{list-style:none;float:left;margin-left:50px;vertical-align:top;cursor:pointer;}
-.jobs ol li:first-child{margin-left:0;}
-.jobs nav .bar{vertical-align:top;height:5px;background-color:#FFFFFF;margin:16px auto;border-radius:5px;}
-.jobs nav .bar .progress{height:100%;width:34px;border-radius:5px;background-color:#E8676B;transition:all 0.3s;}
-.jobs nav .bar .progress1{height:100%;width:41px;border-radius:5px;margin-left:77px;background-color:#E8676B;transition:all 0.3s;}
-.jobs nav .bar .progress2{height:100%;width:55px;border-radius:5px;margin-left:163px;background-color:#E8676B;transition:all 0.3s;}
-.jobs1{position:relative;height:576px;}
-.jobs1 .big{position:absolute;top:0;left:0;}
-.jobs1 .small1{position:absolute;top:0;left:644px;}
-.jobs1 .small2{position:absolute;top:298px;left:644px;}
 .swiper-container{width:788px;height:591px;}
 .swiper-button-prev,.swiper-button-next{width:44px;height:44px;border-radius:50%;background-color:white;}
