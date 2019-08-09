@@ -1,9 +1,7 @@
 findClosest()
-
 window.addEventListener('scroll', function () {
     findClosest();
 })
-
 
 function findClosest() {
     var specialTags = document.querySelectorAll('[date-x]');
