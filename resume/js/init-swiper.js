@@ -1,16 +1,19 @@
-var mySwiper = new Swiper('.swiper-container', {
-    direction: 'horizontal', // 垂直切换选项
-    loop: true, // 循环模式选项
-    autoplay: true,
-    // 如果需要分页器
-    pagination: {
-        el: '.swiper-pagination',
-    },
-
-    // 如果需要前进后退按钮
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-
-})      
+!function () {
+    var view = document.querySelector(".portfolio");
+    var controller = {
+        view: null,
+        mySwiper: null,
+        swiperOptions: {
+            direction: 'horizontal', loop: true, autoplay: true, pagination: { el: '.swiper-pagination', }, navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev', }
+        },
+        init: function (view) {
+            this.view = view;
+            this.initswiper();
+        },
+        initswiper: function () {
+            this.mySwiper = new Swiper('.swiper-container',
+                this.swiperOptions)
+        }
+    }
+    controller.init(view);
+}.call()
