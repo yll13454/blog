@@ -49,7 +49,7 @@ main .downloadResuma{text-align:center;}
 main .downloadResuma a{text-decoration:none;display:inline-block;color:#464D59;font-weight:bold;border:1px solid rgb(203,205,207);font-size:12px;padding:20px 59px;margin:36px auto;border-radius:5px;}
 main .downloadResuma a:hover{box-shadow:1px 2px 7px #858585;transition:box-shadow 0.8s;}
 main .PersonalProfile{text-align:center;margin:6px auto;font-family:cursive;font-weight:bold;line-height:1.8;font-size:18px;}
-main .PersonalProfile,.skills,.jobs{max-width:940px;margin-left:auto;margin-right:auto;}
+main .PersonalProfile,.skills,.jobs,.Message{max-width:940px;margin-left:auto;margin-right:auto;}
 section.skills ol{box-shadow:1px 2px 7px #858585;background-color:#FFFFFF;padding-bottom:50px;padding-right:50px;margin:32px auto;}
 section.skills>h2,section.jobs>h2{text-align:center;margin-top:60px;}
 .skills ol li{list-style:none;float:left;width:50%;box-sizing:border-box;margin-top:40px;padding-left:50px;}
@@ -63,3 +63,11 @@ section.jobs{margin-bottom:100px;text-align:center;}
 .jobs .portfolio{text-align:center;display:inline-block;margin-top:32px;}
 .swiper-container{width:788px;height:591px;}
 .swiper-button-prev,.swiper-button-next{width:44px;height:44px;border-radius:50%;background-color:white;}
+#postMessage{margin-top:32px;width:100%;margin-left:32px;}
+.Message{margin-bottom:100px;}
+.Message>#postMessage>ol{
+    margin:24px;
+}
+.Message>#postMessage>ol>li{
+    margin:12px;
+}
