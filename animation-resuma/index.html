@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/vendor/css/prism.css">
+    <style id="styleTag">
+        * {
+            margin: 0;
+            padding: 0;
+            transition: all 1s;
+        }
+
+        body {
+            height: 100vh;
+            background-color: #eee;
+            display: flex;
+        }
+
+        h2 {
+            text-align: center;
+            color: red;
+        }
+
+        .prewrapper {
+            height: 100%;
+            width: 50%;
+            outline: 1px solid red;
+            padding: 16px;
+            box-sizing: border-box;
+            background-color: white;
+            overflow: overlay;
+            position: relative;
+        }
+
+        .prewrapper>.thickline {
+            border: 8px solid red;
+            height: 100vh;
+            border-left: transparent;
+            border-right: transparent;
+            border-bottom: transparent;
+        }
+
+        .prewrapper>.thickline::before {
+            content: '';
+            display: block;
+            border: 1px solid red;
+            position: absolute;
+            top: 57px;
+            left: 17px;
+            width: 95%;
+        }
+
+        .prewrapper>.thickline>ol>li {
+            display: block;
+            border: 1px dotted red;
+            margin-top: 26px;
+        }
+        .code {
+            font-size: 18px;
+            line-height: 28px;
+            position: absolute;
+            top: 61px;
+            left: 12px;
+        }
+        .paper{
+            box-sizing: border-box;
+            flex: 1;
+            height: 100%;
+            width: 50%;
+            overflow: overlay;
+            padding: 30px;
+        }
+
+        .paper.content>h1,h3{
+            margin: 12px 0;
+        }
+        .paper.content>ol,li{
+            list-style: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="prewrapper">
+        <h2>信 纸</h2>
+        <div class="thickline">
+            <ol>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+
+            </ol>
+        </div>
+            <pre class="code"></pre>     
+    </div>
+    <div class="paper">
+        <pre class="content">
+        </pre>
+    </div>
+    <script src="https://cdn.bootcss.com/marked/0.7.0/marked.min.js"></script>
+    <script src="/vendor/js/prism.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+
+</html>

@@ -1,6 +1,5 @@
 var APP_ID = 'bhzxulk4n5xqyTRGetq904rM-gzGzoHsz';
 var APP_KEY = 'etcATklGud5bnDmGPNNkH8XE';
-
 AV.init({
   appId: APP_ID,
   appKey: APP_KEY
@@ -14,13 +13,10 @@ myForm.addEventListener('submit', function (e) {
   e.preventDefault();
   let name = myForm.querySelector('input[name=lastid]').value;
   let content = myForm.querySelector('input[name=content]').value;
-
-  // testObject.set('words', 'Hello world!');
   testObject.save({
     name:name,
     content:content
   }).then( (testObject) =>{
-    console.log(testObject.attributes.name)
     let name = testObject.attributes.name;
     let content = testObject.attributes.content;
     let li = document.createElement('li');
