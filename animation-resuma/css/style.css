@@ -1,58 +1,8 @@
-* {
-    margin: 0;
-    padding: 0;
-    transition: all 1s;
-}
-
-body {
-    height: 100vh;
-    background-color: #eee;
-    display: flex;
-}
-
-h2 {
-    text-align: center;
-    color: red;
-}
-
-.prewrapper {
-    height: 100%;
-    width: 50%;
-    outline: 1px solid red;
-    padding: 16px;
-    box-sizing: border-box;
-    background-color: white;
-    overflow: overlay;
-    position: relative;
-}
-
-.prewrapper>.thickline {
-    border: 8px solid red;
-    height: 100vh;
-    border-left: transparent;
-    border-right: transparent;
-    border-bottom: transparent;
-}
-
-.prewrapper>.thickline::before {
-    content: '';
-    display: block;
-    border: 1px solid red;
-    position: absolute;
-    top: 57px;
-    left: 17px;
-    width: 95%;
-}
-
-.prewrapper>.thickline>ol>li {
-    display: block;
-    border: 1px dotted red;
-    margin-top: 26px;
-}
-.code {
-    font-size: 18px;
-    line-height: 28px;
-    position: absolute;
-    top: 61px;
-    left: 12px;
+.prewrapper .code{
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom:0;
+    overflow-y:scroll;
+    overflow-x:hidden;
 }
