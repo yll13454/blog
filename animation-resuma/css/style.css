@@ -1,5 +1,7 @@
 .prewrapper .code{
     position: fixed;
+    padding-right: 300px;
+    padding-top: 24px;
     right: 0;
     top: 0;
     bottom:0;

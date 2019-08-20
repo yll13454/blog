@@ -120,7 +120,7 @@ XXX 学校毕业
 - **Email** xxxxxxxx
 - **手机** xxxxxxx`
 
-var css2 =`
+    var css2 = `
 /* 
 * 把自我介绍改的好看些
 */
@@ -136,73 +136,57 @@ var css2 =`
 `
 
     let view = document.querySelector('.prewrapper');
-    let controller = {
-        view: null,
-        styleTag: null,
-        ol: null,
-        codepage: null,
-        codehtml: null,
-        css1:null,
-        css2:null,
-        css3:null,
-        md:null,
-        init: function (view,css1,css2,md,css3) {
-            this.view = view;
-            this.bindEvents();
-            this.css1 = css1;
-            this.css2 = css2;
-            this.css3 = css3;
-            let codehtml = document.querySelector('.paper .content');
-            this.writeCode(css1,css2,this.writeHtml(md,codehtml))
-        },
-        bindEvents: function () {
-            let styleTag = document.querySelector('#styleTag');
-            this.styleTag = styleTag;
-            let ol = document.querySelector('.prewrapper .thickline ol');
-            this.ol = ol;
-            let codepage = document.querySelector('.prewrapper .code');
-            this.codepage = codepage;
-            let codehtml = document.querySelector('.paper .content');
-            this.codehtml = codehtml;
-        },
-        writeCode: function (prefix, preCode,fn) {
-            let n = 0;
-            let id = setInterval(() => {
-                n += 1;
-                this.codepage.innerHTML = prefix + preCode.substring(0, n);
-                this.codepage.innerHTML = Prism.highlight(prefix + preCode.substring(0, n), Prism.languages.css);
-                this.styleTag.innerHTML = prefix + preCode.substring(0, n);
-                this.codepage.scrollTop = this.codepage.scrollHeight;
-                if(n>1100){
-                    this.view.scrollTop = this.view.scrollHeight;
-                }
-                if (n % 19 === 0) {
-                    let li = document.createElement('li');
-                    this.ol.append(li);
-                }
-                if (n > preCode.length) {
-                    clearInterval(id);
-                    fn();
-                }
-            }, 10)
-        },
-        writeHtml: function () {
-            let n = 0;
-            let id1 = setInterval(() => {
-                n += 1;
-                this.codehtml.innerHTML = this.md.substring(0, n);
-                this.codehtml.scrollTop = this.codehtml.scrollHeight;
-                // preCode.innerHTML = Prism.highlight(preCode.innerHTML,Prism.languages.md);
-                if (n > result.length) {
-                    clearInterval(id1);
-                   this.writeCode(this.css2,this.css3,this.mdHtml);
-                }
-            }, 10)
-        },
-        mdHtml:function(){
-            document.querySelector('.paper').innerHTML = marked(result);
-        }
+    let styleTag = document.querySelector('#styleTag');
+    let ol = document.querySelector('.prewrapper .thickline ol');
+    let codepage = document.querySelector('.prewrapper .code');
+    let codehtml = document.querySelector('.paper .content');
+
+    function writeCode(prefix, preCode, fn) {
+        let n = 0;
+        let id = setInterval(() => {
+            n += 1;
+            codepage.innerHTML = prefix + preCode.substring(0, n);
+            codepage.innerHTML = Prism.highlight(prefix + preCode.substring(0, n), Prism.languages.css);
+            styleTag.innerHTML = prefix + preCode.substring(0, n);
+            codepage.scrollTop = codepage.scrollHeight;
+            if (n > 1100) {
+                view.scrollTop = view.scrollHeight;
+            }
+            if (n % 17 === 0) {
+                let li = document.createElement('li');
+                ol.append(li);
+            }
+            if (n > preCode.length) {
+                clearInterval(id);
+                fn&fn();
+            }
+        }, 10)
     }
-    controller.init(view,'',css,md,css2);
+
+    function writeHtml(result,preCode,fn) {
+        let n = 0;
+        let id1 = setInterval(() => {
+            n += 1;
+            preCode.innerHTML = result.substring(0, n);
+            preCode.scrollTop = preCode.scrollHeight;
+            // preCode.innerHTML = Prism.highlight(preCode.innerHTML,Prism.languages.md);
+            if (n > result.length) {
+                clearInterval(id1);
+                fn&fn();
+            }
+        }, 10)
+    }
+
+    function mdHtml(result) {
+        document.querySelector('.paper').innerHTML = marked(result);
+    }
+
+    writeCode('', css, ()=>{
+        writeHtml(md,codehtml,
+            ()=>{writeCode(css,css2,
+                ()=>{mdHtml(md)})
+            })
+    });
+
 }.call()
 
